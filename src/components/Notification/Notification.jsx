@@ -1,4 +1,4 @@
 import { NotificationText } from "./Notification.styled"
-export const  Notification =({message}) => {
-    return <NotificationText>{message}</NotificationText>
+export const  Notification =({Textmessage}) => {
+    return <NotificationText>{Textmessage}</NotificationText>
 }
