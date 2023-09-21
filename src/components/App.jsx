@@ -22,10 +22,10 @@ class App extends Component{
         return result 
       }
 
-      onLeavefeedback = (event) => {
-        const name = event.target.name;
+      onLeavefeedback = (option) => {
+     
         this.setState((prevState)=> ({
-            [name]: prevState[name] + 1
+            [option]: prevState[option] + 1
         }))
       }
 
@@ -35,7 +35,7 @@ class App extends Component{
   return (
     <MainWrap>
     <Section title={'Please leave feedback'}>
-    <FeedbackOptions onLeavefeedback={this.onLeavefeedback}/>
+    <FeedbackOptions options={['good', 'neutral', 'bad']} onLeavefeedback={this.onLeavefeedback}/>
     </Section>
     <Section title={'Statistic'}>
       {total === 0 ? <Notification Textmessage="There is no feedback"/> :
