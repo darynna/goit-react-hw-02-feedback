@@ -35,7 +35,7 @@ class App extends Component{
   return (
     <MainWrap>
     <Section title={'Please leave feedback'}>
-    <FeedbackOptions options={['good', 'neutral', 'bad']} onLeavefeedback={this.onLeavefeedback}/>
+    <FeedbackOptions options={Object.keys(this.state)} onLeavefeedback={this.onLeavefeedback}/>
     </Section>
     <Section title={'Statistic'}>
       {total === 0 ? <Notification Textmessage="There is no feedback"/> :
